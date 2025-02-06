@@ -21,4 +21,5 @@ from category import urls as category_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(category_urls)),
+    # path('category/', include(category_urls)),
 ]
