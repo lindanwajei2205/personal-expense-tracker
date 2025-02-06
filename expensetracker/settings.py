@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -142,10 +143,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# In production, you'll need to define the directory for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Use whitenoise to serve static files in production (needed for Heroku)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
