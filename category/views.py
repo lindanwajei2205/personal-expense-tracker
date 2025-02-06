@@ -7,7 +7,7 @@ from .models import Category
 
 def categories(request):
     categories = Category.objects.all().values()
-    template = loader.get_template('categories.html')
+    template = loader.get_template('category/categories.html')
     context = {
         'categories': categories
     }
