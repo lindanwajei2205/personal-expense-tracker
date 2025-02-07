@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from category import urls as category_urls
+from django.http import HttpResponse
+
+
+def profile(request):
+    return HttpResponse("Profile page: Welcome")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    path('accounts/profile/', profile),
     path('', include(category_urls)),
 ]
