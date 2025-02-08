@@ -12,11 +12,17 @@ def list_items(request):
 
 def add_item(request):
     if request.method == 'POST':
-        form = ItemForm(request.POST)
+        form = ItemForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            context = {'form': form, 'success': True}
-            return render(request, 'item/item_list.html', context)
+            item = form.save(commit=False)
+            item.user = request.user  # Set the user field
+            item.save()
+            return render(
+                request, 'item/item_list.html', {
+                    'form': form,
+                    'message': ['Item added successfully'],
+                }
+            )
     else:
         form = ItemForm()
     context = {'form': form}
