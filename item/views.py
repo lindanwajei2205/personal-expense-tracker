@@ -2,7 +2,9 @@ from django.template import loader
 from django.http import HttpResponse
 from .form import ItemForm
 from .models import Item
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect
 
 
 def list_items(request):
@@ -25,19 +27,29 @@ def add_item(request):
             item = form.save(commit=False)
             item.user = request.user  # Set the user field
             item.save()
-            return render(
-                request, 'item/item_list.html', {
-                    'form': form,
-                    'message': ['Item added successfully'],
-                }
-            )
+            messages.success(request, 'Item added successfully')
+            return redirect('list_items')
     else:
         form = ItemForm()
     context = {'form': form}
     return render(request, 'item/add_item.html', context)
 
 
-def edit_item(request):
-    template = loader.get_template('item/edit_item.html')
-    context = {}
-    return HttpResponse(template.render(context, request))
+def edit_item(request, id):
+    item = get_object_or_404(Item, id=id)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, request.FILES, instance=item)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Item updated successfully')
+            return redirect('list_items')
+    else:
+        form = ItemForm(instance=item)
+    return render(request, 'item/add_item.html', {'form': form})
+
+
+def delete_item(request, id):
+    item = get_object_or_404(Item, id=id)
+    item.delete()
+    messages.success(request, 'Item deleted successfully')
+    return redirect('list_items')

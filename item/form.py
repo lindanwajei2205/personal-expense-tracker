@@ -12,7 +12,7 @@ class ItemForm(forms.ModelForm):
         queryset=Category.objects.all()
     )
     description = forms.CharField(label='Description', max_length=1000)
-    price = forms.DecimalField(label='Price', max_digits=10, decimal_places=2)
+    price = forms.DecimalField(label='Price (£)', max_digits=10, decimal_places=2)
     quantity = forms.IntegerField(label='Quantity')
     image = forms.ImageField(label='Image', required=False)
     purchase_date = forms.DateField(
