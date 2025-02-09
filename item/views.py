@@ -12,7 +12,6 @@ def list_items(request):
         'id', 'name', 'description', 'price', 'quantity', 
         'image', 'purchase_date', 'category__name'
         )
-    print(items)
     template = loader.get_template('item/item_list.html')
     context = {
         'items': items

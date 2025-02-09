@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}Expense Items{% endblock %}
-
+{% load cloudinary %}
 {% block content %}
 <div class="container">
   
@@ -22,6 +22,9 @@
                     <div class="card h-100 shadow-sm border">
                         <div class="card-body">
                             <h5 class="card-title mb-3">{{ item.name }}</h5>
+                            {% if item.image %}
+                            {% cloudinary item.image crop="fill" class="card-img-top rounded-3 w-100" loading="lazy" %}
+                            {% endif %}
                             <p class="card-text mb-1 small"><strong>Price:</strong> £ {{ item.price }}</p>
                             <p class="card-text mb-1 small"><strong>Quantity:</strong> {{ item.quantity }}</p>
                             <p class="card-text mb-1 small"><strong>Category:</strong> {{ item.category__name }}</p>

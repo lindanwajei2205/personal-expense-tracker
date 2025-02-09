@@ -3,6 +3,7 @@ from category.models import Category
 from django.contrib.auth.models import User
 from .models import Item
 from datetime import datetime
+from cloudinary.forms import CloudinaryFileField
 
 
 class ItemForm(forms.ModelForm):
@@ -12,9 +13,11 @@ class ItemForm(forms.ModelForm):
         queryset=Category.objects.all()
     )
     description = forms.CharField(label='Description', max_length=1000)
-    price = forms.DecimalField(label='Price (£)', max_digits=10, decimal_places=2)
+    price = forms.DecimalField(
+        label='Price (£)', max_digits=10, decimal_places=2
+        )
     quantity = forms.IntegerField(label='Quantity')
-    image = forms.ImageField(label='Image', required=False)
+    image = CloudinaryFileField(label='Image', required=False)
     purchase_date = forms.DateField(
         label='Purchase Date',
         widget=forms.DateInput(attrs={'type': 'date', 'max': datetime.now().date()})
@@ -32,8 +35,7 @@ class ItemForm(forms.ModelForm):
             self.fields['user_id'] = forms.ModelChoiceField(
                 queryset=User.objects.filter(id=self.user.id)
             )
-    
+
     def __str__(self):
         return self.name
-    
-    
+
