@@ -1,6 +1,7 @@
 from django.db import models
 from category.models import Category
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class Item(models.Model):
@@ -13,8 +14,8 @@ class Item(models.Model):
     purchase_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='tracker/', blank=True, null=True)
-
+    image = CloudinaryField('image', blank=True, null=True)
+    
     def __str__(self):
         return self.name
     

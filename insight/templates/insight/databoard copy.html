@@ -49,11 +49,9 @@
     </section>
 
    
-    <div class="w-full mt-4">
-        <h3 class="h6 fw-bold text-primary text-center">
-            Visual Analytics 
-        </h3>
-        {% if not pie_chart %}
+    <div class="w-full">
+        <h3 class="h6 fw-bold text-primary text-center">Visual Analytics</h3>
+        {% if pie_chart == 'empty' %}
         <div class="bg-light p-4 rounded-3">
             <i class="fas fa-chart-line fa-2x text-muted mb-2"></i>
             <p class="text-muted small mb-0">
