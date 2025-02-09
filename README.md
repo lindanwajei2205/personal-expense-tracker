@@ -19,7 +19,7 @@ With a simple, intuitive interface and graphical representation of your spending
 
 - [Features](#features)
   * [Logo and navbar](#logo-and-navbar)
-  
+
 
 ## User experience (UX)
 
@@ -64,20 +64,20 @@ With a simple, intuitive interface and graphical representation of your spending
 2. create new Category(part of epic 1)
 
 - As a potential registered user, I can:
-1. Complete the contact form so that I can get in touch with the site owner for inquiries or support.form(part of epic 10
+3. Complete the contact form so that I can get in touch with the site owner for inquiries or support.form(part of epic 10
 )
 - As a website user, I can:
-1. Quickly grasp the website's purpose to efficiently navigate and utilize its features.(part of epic 2)
-2. Navigate to the About page to gain a comprehensive understanding of the app's features and functionality.(part of epic2)
-3. Create an account to access the services available to registered members (part of epic 3)
-4. Log in to access my account and utilize the full features of the website(part of epic 4)
+4. Quickly grasp the website's purpose to efficiently navigate and utilize its features.(part of epic 2)
+5. Navigate to the About page to gain a comprehensive understanding of the app's features and functionality.(part of epic2)
+6. Create an account to access the services available to registered members (part of epic 3)
+7. Log in to access my account and utilize the full features of the website(part of epic 4)
 
 - As a Logged in web user, I can:
-1. Add expense items to the appropriate categor(Part of Epic 8)
-2. View the graphical representation of my expenses (Part of Epic 6).
-3. Edit expense items within the selected category (Part of Epic 8).
-4. Add comments to my added or edited items to note important details or reasons for their inclusion or deletion (Part of epic 7)
-5. Log out of the website to securely end my session and protect my account(part of epic 5)
+8. Add expense items to the appropriate categor(Part of Epic 8)
+9. View the graphical representation of my expenses (Part of Epic 6).
+10. Edit expense items within the selected category (Part of Epic 8).
+11. Add comments to my added or edited items to note important details or reasons for their inclusion or deletion (Part of epic 7)
+12. Log out of the website to securely end my session and protect my account(part of epic 5)
 
 ## Features
 ### Logo and Navbar

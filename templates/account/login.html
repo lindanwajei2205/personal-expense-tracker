@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="card p-3" style="max-width: 400px; width: 100%; border-radius: 0.5rem;">
+        <h4 class="text-center mb-3">{% trans "Sign In" %}</h4>
+        <p class="text-center text-muted mb-4">
+            {% blocktrans %}
+            To start tracking your expenses, please sign in or
+            <a href="{{ signup_url }}" class="link text-primary">sign up</a>
+            if you don't have an account yet.
+            {% endblocktrans %}
+        </p>
+
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+
+            <button class="btn btn-primary w-100 mt-2" type="submit">
+                {% trans "Sign In" %}
+            </button>
+        </form>
+
+        {% if socialaccount_providers %}
+        <p class="text-center text-muted mt-3">{% trans "Or sign in with" %}</p>
+        {% include "account/socialaccount_login.html" %}
+        {% endif %}
+
+        <div class="text-center mt-3">
+            <a href="{% url 'account_reset_password' %}" class="link text-primary">{% trans "Forgot Password?" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

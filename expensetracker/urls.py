@@ -17,16 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from category import urls as category_urls
-from django.http import HttpResponse
+from item import urls as item_urls
+from insight import urls as insight_urls
+from django.shortcuts import render
 
 
-def profile(request):
-    return HttpResponse("Profile page: Welcome")
+def user_profile(request):
+    return render(request, 'account/profile.html')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
-    path('accounts/profile/', profile),
+    path('accounts/profile/', user_profile, name='account_profile'),
+    path('item/', include(item_urls)),
+    path('insight/', include(insight_urls)),
     path('', include(category_urls)),
 ]

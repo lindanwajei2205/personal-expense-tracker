@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Expense Items{% endblock %}
+
+{% block content %}
+<div class="container">
+  
+    <div class="pb-2 d-flex justify-content-between align-items-center border-bottom mb-4">
+        <h1 class="h3">Expense Items</h1>
+        <a href="{% url 'add_item' %}" class="btn btn-primary btn-sm">+ Add New Item</a>
+    </div>
+    
+   
+    {% if items|length == 0 %}
+        <div class="alert alert-warning text-center" role="alert">
+            No items found.
+        </div>
+    {% else %}
+        <div class="row g-3">
+            {% for item in items %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">{{ item.name }}</h5>
+                            <p class="card-text mb-1 small"><strong>Price:</strong> £{{ item.price }}</p>
+                            <p class="card-text mb-1 small"><strong>Quantity:</strong> {{ item.quantity }}</p>
+                            <p class="card-text mb-1 small"><strong>Category:</strong> {{ item.category__name }}</p>
+                            <p class="card-text mb-3 small"><strong>Purchase Date:</strong> {{ item.purchase_date }}</p>
+                            <div class="d-flex justify-content-end">
+                                <a href="{% url 'edit_item' item.id %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
