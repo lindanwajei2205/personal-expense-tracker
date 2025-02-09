@@ -2,18 +2,18 @@
 {% load crispy_forms_tags %}
 {% block title %}Add Expense Item{% endblock %}
 {% block content %}
-<h3 class="pb-4 display-12 text-center border-bottom">
+<h3 class="pb-2 text-center border-bottom">
     Add Expense Item
 </h3>
-<div class="container mt-5 mb-5">
+<div class="container mt-2 mb-5">
     <div class="row justify-content-center">
-        <div class="col-md-9">
+        <div class="w-full col-md-9">
             <form method="POST" enctype="multipart/form-data" class="form-horizontal">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="form-group row">
-                    <div class="col-sm-10 offset-sm-2 text-right">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="w-full mt-2">
+                        <button class="btn btn-primary w-100 " type="submit">Submit</button>
                     </div>
                 </div>
             </form>

@@ -2,21 +2,22 @@ from django import forms
 from category.models import Category
 from django.contrib.auth.models import User
 from .models import Item
+from datetime import datetime
 
 
 class ItemForm(forms.ModelForm):
+    name = forms.CharField(label='Item Name', max_length=100)
     category = forms.ModelChoiceField(
         label='Category',
         queryset=Category.objects.all()
     )
-    name = forms.CharField(label='Item Name', max_length=100)
     description = forms.CharField(label='Description', max_length=1000)
     price = forms.DecimalField(label='Price', max_digits=10, decimal_places=2)
     quantity = forms.IntegerField(label='Quantity')
     image = forms.ImageField(label='Image', required=False)
     purchase_date = forms.DateField(
         label='Purchase Date',
-        widget=forms.DateInput(attrs={'type': 'date'})
+        widget=forms.DateInput(attrs={'type': 'date', 'max': datetime.now().date()})
     )
 
     class Meta:
