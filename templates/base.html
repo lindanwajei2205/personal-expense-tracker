@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
       <div class="container-fluid">
           <!-- Logo and Branding -->
-          <a class="appname-navbar-brand" href="{% url 'account_profile' %}">
+          <a class="appname-navbar-brand" href="{% url 'display_insight' %}">
               <img src="{% static 'images/logo.webp' %}" alt="Logo" class="logo-img">
               Personal Expense Tracker
           </a>
@@ -43,7 +43,7 @@
                   {% if user.is_authenticated %}
                   <!-- Display Username & Logout Option -->
                   <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="{% url 'account_profile' %}">
                         <i class="fas fa-user-circle"></i>
                           <span class="username">Hi, {{ user.username }}</span>
                       </a>
@@ -104,12 +104,7 @@
                                       <span class="text-muted">{% trans "Insight" %}</span>
                                   </a>
                               </li>
-                              <li class="list-group-item">
-                                  <a href="{% url 'account_profile' %}" class="d-flex align-items-center text-decoration-none py-2">
-                                      <i class="fas fa-user-circle text-secondary me-3"></i>
-                                      <span class="text-muted">{% trans "Profile" %}</span>
-                                  </a>
-                              </li>
+                             
                               <li class="list-group-item">
                                   <a href="{% url 'list_items' %}" class="d-flex align-items-center text-decoration-none py-2">
                                       <i class="fas fa-list-alt text-secondary me-3"></i>
@@ -122,6 +117,12 @@
                                       <span class="text-muted">{% trans "Add Item" %}</span>
                                   </a>
                               </li>
+                              <li class="list-group-item">
+                                <a href="{% url 'account_profile' %}" class="d-flex align-items-center text-decoration-none py-2">
+                                    <i class="fas fa-user-circle text-secondary me-3"></i>
+                                    <span class="text-muted">{% trans "Profile" %}</span>
+                                </a>
+                            </li>
                               <li class="list-group-item">
                                   <a href="{% url 'account_email' %}" class="d-flex align-items-center text-decoration-none py-2">
                                       <i class="fas fa-envelope text-secondary me-3"></i>

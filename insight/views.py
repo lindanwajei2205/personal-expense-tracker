@@ -10,3 +10,13 @@ def display_insight(request):
         'categories': categories
     }
     return HttpResponse(template.render(context, request))
+
+
+def pie_chart(request):
+    # categories = Category.objects.all().values()
+    # template = loader.get_template('insight/pie_chart.html')
+    # context = {
+    #     'categories': categories
+    # }
+    # return HttpResponse(template.render(context, request))
+    return HttpResponse('Pie chart')
