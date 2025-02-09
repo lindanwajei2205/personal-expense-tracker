@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Expense Items{% endblock %}
 {% load cloudinary %}
 {% block content %}
 <div class="container">
   
     <div class="pb-2 d-flex justify-content-between align-items-center border-bottom mb-4">
-        <h1>Expense Items</h1>
+        <h2 class="h3">Expense Items</h1>
         <a href="{% url 'add_item' %}" class="btn btn-primary btn-sm">+ Add New Item</a>
     </div>
     
@@ -24,6 +24,9 @@
                             <h5 class="card-title mb-3">{{ item.name }}</h5>
                             {% if item.image %}
                             {% cloudinary item.image crop="fill" class="card-img-top rounded-3 w-100" loading="lazy" %}
+                                {% else %}
+                                <img src="{% static 'images/no-image.jpeg' %}" class="card-img-top rounded-3 w-100" alt="{{ item.name }}">
+                               
                             {% endif %}
                             <p class="card-text mb-1 small"><strong>Price:</strong> £ {{ item.price }}</p>
                             <p class="card-text mb-1 small"><strong>Quantity:</strong> {{ item.quantity }}</p>

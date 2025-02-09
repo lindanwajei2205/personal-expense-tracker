@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
       <div class="container-fluid">
           <!-- Logo and Branding -->
-          <a class="appname-navbar-brand" href="{% url 'display_insight' %}">
+          <a class="appname-navbar-brand" href="{% if user.is_authenticated %}{% url 'display_insight' %}{% else %}/{% endif %}">
               <img src="{% static 'images/logo.webp' %}" alt="Logo" class="logo-img">
               Personal Expense Tracker
           </a>
@@ -137,7 +137,7 @@
       
               <!-- Main Content -->
               <div class="col-12 col-md-9">
-                  <div class="card shadow-sm border-0 rounded ">
+                  <div class="py-3 card shadow-sm border-0 rounded ">
                       {% block content %}
                       {% endblock content %}
                   </div>

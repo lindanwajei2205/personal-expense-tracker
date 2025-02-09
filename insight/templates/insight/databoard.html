@@ -5,9 +5,9 @@
 
 {% block content %}
 <!-- Page Header -->
-<div class="mt-3 container-fluid  border-bottom">
+<div class="container-fluid  border-bottom">
     <div class="container text-center">
-        <h2>Insight Data Board</h2>
+        <h2 class="h3">Insight Data Board</h2>
         <p class="text-muted small">
            Track and Analyze your personal expenses with the interactive graphs and charts.
         </p>
@@ -15,18 +15,18 @@
 </div>
 
 <!-- Main Content -->
-<div class="container my-4">
-    <!-- Categories Section -->
+<div class="container mt-3">
     <section>
-        <p class="text-center fw-bold">
+        <p class="text-center text-secondary">
+            <i class="fas fa-hand-pointer text-secondary"></i>
             Select a Category to explore analytics
         </p>
         <div class="row g-3 justify-start">
             {% for category in categories %}
             <div class="col-md-4 col-lg-3">
                 <a href="{% url 'category_chart' category.id %}" class="text-decoration-none">
-                    <div class="card h-100 border shadow-none">
-                        <div class="card-body border border-2 rounded-3
+                    <div class="card h-100 border rounded-3">
+                        <div class="card-body  shadow-sm border border-2 rounded-3
                         {% if selected_category_id == category.id %}
                             border-primary
                         {% else %}
@@ -37,7 +37,7 @@
                                 <i class="fas {{ category.icon_name }} text-primary mb-2"></i> 
                                 {{ category.name }} 
                             </h6>
-                            <p class="text-muted text-extra-small mb-0">
+                            <p class="text-muted small mb-0">
                                 {{ category.description|truncatechars:60 }}
                             </p>
                         </div>
@@ -50,7 +50,8 @@
 
     {% if selected_category_id and pie_chart %}
     <div class="w-full mt-4 pt-2  border-top">
-        <h3 class="h6 fw-bold text-primary text-center">
+        <h3 class="h6 fw-bold text-primary text-center text-uppercase">
+            <fa class="fas fa-chart-pie text-primary"></fa>
             Visual Analytics 
         </h3>
 
@@ -105,7 +106,8 @@
                             </table>
                         </div>
                         <h1 class="h5 fw-bold text-danger text-start">
-                            TOTAL PRICE: £{{ total_price }}
+                            <fa class="fas fa-coins text-danger"></fa>
+                            TOTAL: £{{ total_price }}
                         </h1>
                     </div>
                     

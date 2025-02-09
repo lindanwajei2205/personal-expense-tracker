@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 body{
   background-color: #f8f9fa;
-  font-family: "Montserrat", serif;
+  font-family: "Bellefair", serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
+  font-size: 18px;
 }
 
 .navbar-custom {
@@ -20,7 +20,7 @@ body{
 }
 
 .appname-navbar-brand, .appname-navbar-brand:hover {
-    font-family: "Bona Nova SC", serif;
+  font-family: "Cabin", serif;
   font-weight: 400;
   font-size: 13px;
   color: #ffffff;
@@ -28,7 +28,8 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Bona Nova SC", serif;
+ font-family: "Cabin", serif;
+ font-weight: bold;
 }
 
 .navbar-custom .nav-link:hover {
