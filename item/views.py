@@ -1,12 +1,20 @@
 from django.template import loader
 from django.http import HttpResponse
 from .form import ItemForm
+from .models import Item
 from django.shortcuts import render
 
 
 def list_items(request):
+    items = Item.objects.select_related('category').all().values(
+        'id', 'name', 'description', 'price', 'quantity', 
+        'image', 'purchase_date', 'category__name'
+        )
+    print(items)
     template = loader.get_template('item/item_list.html')
-    context = {}
+    context = {
+        'items': items
+    }
     return HttpResponse(template.render(context, request))
 
 
