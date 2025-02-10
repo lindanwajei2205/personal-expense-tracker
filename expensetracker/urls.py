@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from category import urls as category_urls
 from item import urls as item_urls
 from insight import urls as insight_urls
 from django.shortcuts import render
@@ -26,11 +25,15 @@ def user_profile(request):
     return render(request, 'account/profile.html')
 
 
+def home(request):
+    return render(request, 'public/home.html')
+
+
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path('accounts/profile/', user_profile, name='account_profile'),
     path('item/', include(item_urls)),
     path('insight/', include(insight_urls)),
-    path('', include(category_urls)),
 ]

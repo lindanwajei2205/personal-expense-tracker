@@ -35,6 +35,13 @@ class ItemForm(forms.ModelForm):
             self.fields['user_id'] = forms.ModelChoiceField(
                 queryset=User.objects.filter(id=self.user.id)
             )
+        if self.instance and self.instance.pk:
+            self.fields['image'].widget = forms.widgets.FileInput()
+            if self.instance.image:
+                self.fields['image'].help_text = (
+                    f'<img src="{self.instance.image.url}" alt="{self.instance.name}" '
+                    'style="max-width: 200px; max-height: 200px;" />'
+                )
 
     def __str__(self):
         return self.name
