@@ -20,7 +20,8 @@ class ItemForm(forms.ModelForm):
     image = CloudinaryFileField(label='Image', required=False)
     purchase_date = forms.DateField(
         label='Purchase Date',
-        widget=forms.DateInput(attrs={'type': 'date', 'max': datetime.now().date()})
+        widget=forms.DateInput(
+            attrs={'type': 'date', 'max': datetime.now().date()})
     )
 
     class Meta:

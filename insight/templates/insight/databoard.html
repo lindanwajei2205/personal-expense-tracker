@@ -55,18 +55,16 @@
             Visual Analytics 
         </h3>
 
-       <div class="w-full d-flex  border-top">
-        <div class="col-12 col-md-6">
-          <div class="p-4">
-          
+       <div class="w-full row d-flex border-top">
+        <div class="col-12 col-md-5">
+          <div class="pt-4">
             <div class="text-center">
                 <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart" class="img-fluid">
             </div>
-          
           </div>
         </div>
 
-            <div class="mt-4 col-12 col-md-6">
+            <div class="mt-4 col-12 col-md-7">
                     <div class="p-3 border rounded-3">
                         <h2 class="h6 text-primary mb-3">Items in the selected Category</h2>
                         <div class="table-responsive">
@@ -113,6 +111,21 @@
                     
             </div>
         </div>
+        
+        <!-- comment form -->
+        <div class="w-full mt-4 border">
+            <div class="py-2 px-4 bg-light">
+                <form method="POST" class="form-horizontal">
+                    {% csrf_token %}
+                    {{ comment_form|crispy }}
+                    <div class="d-flex flex-row row">
+                        <div class="w-full mt-2">
+                            <button class="btn btn-primary w-100 " type="submit">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     {% else %}
     <div class="bg-light text-center my-4 p-4 rounded-3">
@@ -122,5 +135,13 @@
         </p>
     </div>
     {% endif %}
+
+
+
+     
+   
+     
+   
+
 </div>
 {% endblock %}

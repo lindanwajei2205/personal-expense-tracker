@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'category',
     'item',
     'insight',
+    'comment',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

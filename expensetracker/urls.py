@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from item import urls as item_urls
 from insight import urls as insight_urls
+from comment import urls as comment_urls
 from django.shortcuts import render
 
 
@@ -36,4 +37,5 @@ urlpatterns = [
     path('accounts/profile/', user_profile, name='account_profile'),
     path('item/', include(item_urls)),
     path('insight/', include(insight_urls)),
+    path('comment/', include(comment_urls)),
 ]

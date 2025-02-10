@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Comments{% endblock %}
+{% block content %}
+
+<div class="container text-center">
+    <h2 class="h3">Comments on your financial expenses</h2>
+    <p class="text-muted small">
+        Share your thoughts and comments on your financial expenses.
+    </p>
+</div>
+
+<div class="container-fluid  mt-2 mb-5 ">
+    <!-- Comments Section -->
+    <div class="row justify-content-center">
+        <div class="w-full">
+          <div class="px-4 card shadow-sm border py-4" style="max-height: 400px; overflow-y: auto;">
+      
+            {% for comment in comments %}
+            <div class="card mb-3 shadow-sm scrollable-comments overflow-y: auto;">
+             
+              <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                    <h5 class="mb-0 small">
+                      <i class="fas fa-user-circle text-secondary me-2"></i>
+                      {{ comment.user }}
+                    </h5>
+                    <small class="text-muted text-extra-small mt-2 mt-md-0 ms-md-3">
+                      <i class="fas fa-calendar-alt text-secondary me-1"></i>
+                      Posted on {{ comment.created_at|date:"M j, Y, g:i:s a" }}
+                    </small>
+                  </div>
+                <span class="badge bg-secondary">{{ comment.category }}</span>
+              </div>
+              
+             
+              <div class="card-body">
+                <p class="mb-0">{{ comment.comment }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      
+    <!-- Comment Form -->
+    <div class="row justify-content-center mt-4 border-top">
+        <div class="col-lg-8 mt-2">
+            <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="d-grid mt-3">
+                    <button class="btn btn-primary btn-lg" type="submit">Save Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
