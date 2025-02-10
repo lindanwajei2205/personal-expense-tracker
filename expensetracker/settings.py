@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'expensetracker.wsgi.application'
 #         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 #     }
 # else:
-#     DATABASES = {
+# DATABASES = {
 #         'default': {
 #             'ENGINE': 'django.db.backends.sqlite3',
 #             'NAME': BASE_DIR / 'db.sqlite3',

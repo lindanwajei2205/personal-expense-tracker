@@ -68,6 +68,5 @@ def chart(request, id):
         'total_price': total_price['total_price'],
         'pie_chart': pie_chart(request, id)
     }
-    print(items_in_category)
     template = loader.get_template('insight/databoard.html')
     return HttpResponse(template.render(context, request))
