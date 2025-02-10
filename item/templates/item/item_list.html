@@ -6,7 +6,7 @@
 <div class="container">
   
     <div class="pb-2 d-flex justify-content-between align-items-center border-bottom mb-4">
-        <h2 class="h3">Expense Items</h1>
+        <h1 class="h3">Expense Items</h1>
         <a href="{% url 'add_item' %}" class="btn btn-primary btn-sm">+ Add New Item</a>
     </div>
     
@@ -23,7 +23,7 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3">{{ item.name }}</h5>
                             {% if item.image %}
-                            {% cloudinary item.image crop="fill" class="card-img-top rounded-3 w-100" loading="lazy" %}
+                            {% cloudinary item.image crop="fill" class="card-img-top rounded-3 w-100" loading="lazy" alt=item.name %}
                                 {% else %}
                                 <img src="{% static 'images/no-image.jpeg' %}" class="card-img-top rounded-3 w-100" alt="{{ item.name }}">
                                
