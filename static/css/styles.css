@@ -3,7 +3,6 @@
 body, html{
   background-color: #f8f9fa;
   font-family: "Bellefair", serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-size: 18px;
   height: 100%;
@@ -42,24 +41,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary-custom {
   background-color: #3498db;
-  border-color: #3498db;
   color: #ffffff;
 }
 
 .btn-primary-custom:hover {
   background-color: #2980b9;
-  border-color: #2980b9;
 }
 
 .btn-success-custom {
   background-color: #27ae60;
-  border-color: #27ae60;
   color: #ffffff;
 }
 
 .btn-success-custom:hover {
   background-color: #219653;
-  border-color: #219653;
 }
 
 .card-custom {
@@ -124,30 +119,6 @@ h1, h2, h3, h4, h5, h6 {
 .text-extra-small {
     font-size: 11px;
 }
-
-/* dismiss alert message container */
-.alert-dismissed {
-   display: hidden;
-}
-
-/* Comments */
-.scrollable-comments {
-    scrollbar-width: thin; 
-    scrollbar-color: #cccccc transparent; 
-  }
-  
-  .scrollable-comments::-webkit-scrollbar {
-    width: 4px;
-  }
-  
-  .scrollable-comments::-webkit-scrollbar-thumb {
-    background-color: #cccccc;
-    border-radius: 10px;
-  }
-  
-  .scrollable-comments::-webkit-scrollbar-thumb:hover {
-    background-color: #999;
-  }
 
 /* Home Page Section */
 .hero-section {
