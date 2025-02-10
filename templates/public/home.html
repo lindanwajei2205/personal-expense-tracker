@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+
+{% block public_content %}
+
+ 
+<div class="container mt-4">
+    <div class="hero-section text-center">
+      <h1 class="display-5 fw-bold">
+        Ready to track and take full control of your spending?
+      </h1>
+      <p class="lead mt-3">
+        Sign up now and take the first step towards financial management and freedom!
+     </p>
+     <a href="{% url 'account_login' %}" class="btn btn-secondary btn-lg border-2 border-white btn-block mt-4 px-5 py-3 fs-4">Get Started</a>
+    </div>
+  </div>
+
+
+  <div id="features" class="container features ">
+    <div class="px-4 row text-center">
+      <h2 class="mb-5 fw-bold">Why Choose Our Tracker?</h2>
+      <div class="col-md-4">
+        <div class="card feature-card shadow-sm border-0">
+          <div class="card-body">
+            <i class="fas fa-wallet fa-3x text-primary mb-3"></i>
+            <h5 class="card-title fw-bold">Expense Tracking</h5>
+            <p class="card-text">
+                Keep track of your spending habits and identify areas where you can save money.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card shadow-sm border-0">
+          <div class="card-body">
+            <i class="fas fa-chart-pie fa-3x text-success mb-3"></i>
+            <h5 class="card-title fw-bold">Visual Analytics</h5>
+            <p class="card-text">
+                Analyze your expenses with interactive charts to make informed decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card shadow-sm border-0">
+          <div class="card-body">
+            <i class="fas fa-mobile-alt fa-3x text-warning mb-3"></i>
+            <h5 class="card-title fw-bold">Mobile Friendly</h5>
+            <p class="card-text">Access your tracker anytime, anywhere with a fully responsive design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock public_content %}
