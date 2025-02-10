@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
-body{
+body, html{
   background-color: #f8f9fa;
   font-family: "Bellefair", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-size: 18px;
+  height: 100%;
 }
 
 .navbar-custom {
