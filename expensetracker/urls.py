@@ -19,7 +19,7 @@ from django.urls import path, include
 from item import urls as item_urls
 from insight import urls as insight_urls
 from comment import urls as comment_urls
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def user_profile(request):
@@ -27,6 +27,8 @@ def user_profile(request):
 
 
 def home(request):
+    if request.user.is_authenticated:
+        return redirect('display_insight')
     return render(request, 'public/home.html')
 
 
