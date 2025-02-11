@@ -1,3 +1,10 @@
+
+#### img for responsiveness mobile/tablet and laptop
+![Amiresponsive](documents/amiresp.png)
+
+#### Deployed link 
+- [Deployed](https://personal-expense-tracker-ci-e0fff526207f.herokuapp.com/ "link to the deployed site")
+
 # Personal Expense Tracker
 
 The Personal Expense Tracker is a web application designed to help users manage and track their finances with ease. Users can categorise their expenses, and monitor their spending habits. 
@@ -32,10 +39,10 @@ With a simple, intuitive interface and graphical representation of your spending
 - [Python Validations](#python-validations)
 - [Database](#database)
 - [Deployment steps](#deployment-steps)
+- [Technologies and tools](#technologies-and-tools)
+- [Credits](#credits)
 
  
-
-
 
 ## User experience (UX)
 
@@ -103,8 +110,6 @@ With a simple, intuitive interface and graphical representation of your spending
 ## Features
 ### Logo and Navbar
 The navigation bar and logo are positioned at the top of the page, offering a responsive and user-friendly design. Prioritizing a "mobile-first" approach, the navigation bar features a clickable hamburger icon with a dropdown menu on mobile devices. As the screen size increases (from tablets to laptops and beyond), the hamburger icon disappears, and the navigation bar expands to display options for navigating to different pages, including Registration/Sign Up, Login, and About. Please refer to the screenshots below for visual reference.
-#### img for responsiveness mobile/tablet and laptop
-![Amiresponsive](documents/amiresp.png)
 
 #### Mobile navigation using burger menu
 ![Mobile-nav](documents/mobilenav.png)
