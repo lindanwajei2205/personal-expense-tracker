@@ -285,6 +285,9 @@ Validations for HTML and CSS
 ### CSS
 ![Css](documents/html-and-css-validator/css-stylesheet.png)
 
+### JS validattion
+![Javascript](documents/Js-validation.png)
+
 ## Python Validations
 Python validations for the below;
 
