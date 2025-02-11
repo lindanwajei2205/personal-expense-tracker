@@ -32,7 +32,7 @@ With a simple, intuitive interface and graphical representation of your spending
   * [User dashboard](#user-dashboard)
   * [Landing page](#landing-page)
   * [Sign form](sign-form)
-
+- [Wireframe](#wireframe)
 - [Manual testing](#manual-testing)
 
 - [Html and Css Validations](#html-and-css-validations)
@@ -214,6 +214,16 @@ This is a simple form to register a new user. It includes fields for the usernam
 This page asks users if they are sure they want to sign out. It includes a red logout button underneath, and a button that takes the user back to the insights dashboard if they choose to remain logged in.
 
 ![Sign out](documents/user-dashboard/signout-form.png)
+
+### Wireframe 
+- Mobile
+![Mobile](documents/mobile.jpg)
+
+- Ipad 
+![Ipad](documents/ipad.jpg)
+
+- Laptop
+![Laptop](documents/laptop.jpg)
 
 ### Manual testing
 
