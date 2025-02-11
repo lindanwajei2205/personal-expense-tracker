@@ -30,7 +30,8 @@ With a simple, intuitive interface and graphical representation of your spending
 
 - [Html and Css Validations](#html-and-css-validations)
 - [Python Validations](#python-validations)
-
+- [Database](#database)
+- [Deployment steps](#deployment-steps)
 
  
 
@@ -288,11 +289,75 @@ Python validations for the below;
 ![Item view](documents/python-validator/item-view.png)
 
 ## Lighthouse 
+Perf
 ![Lighthouse](documents/lighthouse/1.png)
 ![Lighthouse2](documents/lighthouse/2.png)
 
 ## Entity realtionship diagram
 ![ERD](documents/ERD.png)
+
+### Database
+
+- [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/) was used as the PostgreSQL database for this project
+
+## Deployment steps
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+- Install the gunicorn python package and create a file called 'Procfile' in the repo's root directory
+- In the Procfile write 'web: gunicorn expensetracker.wsgi'
+- In settings.py add ".herokuapp.com" to the ALLOWED_HOSTS list
+- In settings.py add 'https://*.herokuapp.com' to CSRF_TRUSTED_ORIGINS list
+- git add, commit and push to github
+- Navigate to the Heroku dashboard
+- Create a new Heroku app
+- Give it a name and select the region 'Europe'
+- Navigate to settings tab and scroll down to Config Vars
+- Click 'Reveal Config Vars'
+- Add the following keys:
+    - key = DATABASE_URL | value = (my secret database url)
+    - key = SECRET_KEY | value = (my secret key)
+- Navigate to Deploy tab
+- Connect to GitHub and select the repo 'lunar-lists'
+- Scroll down to 'Manual deploy' and select the 'main' branch
+
+## Technologies and tools
+
+- [VS Code](https://code.visualstudio.com/ "link to visual studio code webpage") was used as the ide for this whole project
+- [Cloudinary](https://cloudinary.com/ "link to cloudinary homepage") was used to host images
+- [GitHub](https://github.com/ "link to github webpage") was used to store the code files, README files and assets
+- [Git](https://git-scm.com/ "link to official git website") was used as a version control software to commit and push the code to the GitHub repository
+- [Heroku](https://id.heroku.com/login "link to Heroku login") was used for deployment
+- [dbeaver](https://dbeaver.io/ "link to dbeaver") was used to make a diagram of the database schema.
+- [Prettier](https://prettier.io/ "link to official prettier website") was used as the default formatter in Visual Studio Code IDE, for html and css files.
+- [Bootstrap](https://getbootstrap.com/ "link to official bootstrap website") was used to quickly layout, position and size critical website features
+- [Balsamiq](https://balsamiq.com/wireframes/ "link to official balsamiq website") was used in early planning to create wireframes
+- [Google Fonts](https://fonts.google.com/ "link to official google fonts website") was used to import fonts
+- [Favicon Generator](https://favicon.io/favicon-generator/ "link to official favicon generator website") was used to make a favicon
+- [Font Awesome](https://fontawesome.com/ "link to official font awesome website") was used for all icons
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/ "Link to official chrome developer tools website") was used for lighthouse testing, debugging and consistently checking responsiveness
+- [W3C Markup Validator](https://validator.w3.org/ "link to official html validator") was used to validate all live html
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/ "link to official css validator") was used to validate CSS code
+- [JS Hint](https://jshint.com/ "link to official javascript validator") was used to validate JavaScript code
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/ "link to official python validator") was used to validate all python code
+- [Django Crispy Forms](https://pypi.org/project/django-crispy-forms/ "link to official crispy forms website") were used throughout the project to quickly create forms
+- [Chat-GPT](https://chat.openai.com/ "link to chat gpt")  used to create the text content.
+- [Deep-seek](https://www.deepseek.com/ "link to deepseek") used to create the text content aswell.
+
+## Credits
+
+- [Code Institute](https://learn.codeinstitute.net/dashboard/ "link to Code Institute LMS") Code Institute walkthroughs
+
+- [Google chrome](https://www.google.com/chrome/ "link to google chrome") to generate item images
+- [Youtube](https://www.youtube.com/ "link to youtube")
+
+- [Facebook](https://www.facebook.com/ "link to facebook") social media icon link
+- [X](https://www.X.com/ "link to X") social media icon link
+- [instagram](https://www.instagram.com/ "link to instagram") social media icon link
+- [Chat-GPT](https://chat.openai.com/ "link to chat gpt")  used to create the text content.
+- [Deep-seek](https://www.deepseek.com/ "link to deepseek") used to create the text content aswell.
+
+
+
 
 
 
