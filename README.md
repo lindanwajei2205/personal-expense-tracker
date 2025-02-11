@@ -19,6 +19,9 @@ With a simple, intuitive interface and graphical representation of your spending
 
 - [Features](#features)
   * [Logo and navbar](#logo-and-navbar)
+  * [Django alert messages](#django-alert-messages)
+  *
+
 
 
 ## User experience (UX)
@@ -88,10 +91,18 @@ With a simple, intuitive interface and graphical representation of your spending
 ### Logo and Navbar
 The navigation bar and logo are positioned at the top of the page, offering a responsive and user-friendly design. Prioritizing a "mobile-first" approach, the navigation bar features a clickable hamburger icon with a dropdown menu on mobile devices. As the screen size increases (from tablets to laptops and beyond), the hamburger icon disappears, and the navigation bar expands to display options for navigating to different pages, including Registration/Sign Up, Login, and About. Please refer to the screenshots below for visual reference.
 #### img for responsiveness mobile/tablet and laptop
-![Mobile/lager screens navbar with burger menu]
-#### navigations and images
-![Images for diff navs]
-! [Images for the diff pages]
+![Amiresponsive](documents/amiresp.png)
+
+#### Mobile navigation using burger menu
+![Mobile-nav](documents/mobilenav.png)
+
+![Mobile-nav-signin](documents/signin-mobile.png)
+
+#### Larger screen navigation using burger menu
+![Monitor-nav](documents/largescreen.png)
+
+![Large-signin](documents/large-signin.png)
+
 
 
 ### Django alert messages
@@ -101,6 +112,23 @@ For every comment, the user is alerted. for example when a comment is added rega
 The first example is an alert that shows "successfully signed in as username" upon sign in.
 
 ![Login Alert Message](documents/alerts/django-alert1.png)
+
+#### Django alert message example 2
+The second example is an alert that shows 'You have signed out' after the prompt 'Are you sure you want to sign out?'. Once the 'Yes' button is clicked, the alert pops up. See the images below:
+
+![Logout Alert Message](documents/alerts/django-alert2.png)
+
+![Confirm Signout](documents/alerts/confirm-signout.png)
+
+#### Django alert message example 3
+The third example is an alert that shows 'Comment added successfully.' This pops up when a user adds a comment and clicks 'Save.' See the image below:
+
+![Comment Alert Message](documents/alerts/django-alert3.png)
+
+### A constant display of the user's login status, showing whether they are logged in or out.
+The base HTML checks whether the user is logged in and displays either "You are logged in as [username]" or "You are not logged in," based on the authentication state.
+
+####
 
 
 
