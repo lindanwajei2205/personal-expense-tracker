@@ -10,6 +10,9 @@
     {% block extra_head %}
     {% endblock extra_head %}
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -210,6 +213,7 @@
 </div>
   <!-- Script to auto dismiss message box -->
   <script>
+    /*jshint esversion:6*/
     document.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(() => {
             const alert = document.getElementById('message-alert');
