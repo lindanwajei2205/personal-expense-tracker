@@ -26,6 +26,12 @@ With a simple, intuitive interface and graphical representation of your spending
   * [Landing page](#landing-page)
   * [Sign form](sign-form)
 
+- [Manual testing](#manual-testing)
+
+- [Html and Css Validations](#html-and-css-validations)
+- [Python Validations](#python-validations)
+
+
  
 
 
@@ -203,8 +209,90 @@ This page asks users if they are sure they want to sign out. It includes a red l
 
 ![Sign out](documents/user-dashboard/signout-form.png)
 
-### Form with CRUD functionality when logged in
+### Manual testing
 
+| Feature                    | Tested?  | User Input Required | User Feedback Provided     | Pass/Fail | Fix |
+|----------------------------|----------|---------------------|----------------------------|-----------|-----|
+| Navbar Logo and Icons | Yes | Click | sign in and sign up takes user to the form to either sign in or register. | Pass | - |
+| Features on home page | Yes | click | takes users to the 'Get started' call to action button | Pass | - |
+| Sign Up Page               | Yes      | Username/ Email / Password | Empty fields deliver prompt to user, email field demands '@' symbols, password requirements need to be met | Pass | - |
+| Sign In | Yes | Username and Password | Username//Password must be exactly as registered originally in either lowercase/uppercase or mixture | Pass | - |
+| Home Page Buttons/Get started| Yes | Click | First button goes to sign in or sign up if not registered | Pass | - |
+| Social Media Buttons | Yes | Click | Each icon takes you to the relevant social media site. | Pass | - |
+| Insight databoard | Yes | click on any categories | Shows the visual anayltics of users' expenses for that category | Pass | - |
+| Expense items| Yes | Click on expense items | View users' expense list with options to edit/delete. | Pass | - |
+| Add item | Yes | Click on add item | Form contains item name, category,description,date of purchse, price, quantity, upload image option and comment| Pass | - |
+| Comment on expenses | Yes | Click  | list of previous comment and a form to add new comment on chosen expense category | Pass | - |
+| profile | Yes | click | Users' profile which includes username, email and date registered | Pass | - |
+| change email| Yes | option to add/change email| 'part of future feature. | fail | - |
+| pie chart | Yes | Press delete button | correlates with the expense item added and updates automatically once new iten is added to a category | Pass |
+
+## Html and Css Validations
+Validations for HTML and CSS 
+
+### Landing pageHtml
+![Landing html](documents/html-and-css-validator/landing_page.png)
+
+### Insight datahtml
+![Insight html](documents/html-and-css-validator/data-insight.png)
+
+### Add expensehtml
+![Add expensehtml](documents/html-and-css-validator/add_expense.png)
+
+### Item  listhtml
+![Item listhtml](documents/html-and-css-validator/item_list.png)
+
+### Commentshtml
+![Commentshtml](documents/html-and-css-validator/comment.png)
+
+### Edit expense
+![Editexpense html](documents/html-and-css-validator/edit_expense.png)
+
+### Logout
+![Logout](documents/html-and-css-validator/logout.png)
+
+### Signin validation
+![Signin html](documents/html-and-css-validator/sign_in.png)
+
+### Signup validation
+![Signup html](documents/html-and-css-validator/signup.png)
+
+### CSS
+![Css](documents/html-and-css-validator/css-stylesheet.png)
+
+## Python Validations
+Python validations for the below;
+
+### Category model
+![Category model](documents/python-validator/category-model.png)
+
+### Category view
+![Category view](documents/python-validator/category-view.png)
+
+### Comment form
+![Comment form](documents/python-validator/comment-form.png)
+
+### Comment view
+![Comment view](documents/python-validator/comment-view.png)
+
+### Insight view
+![Insight view](documents/python-validator/insight-view.png)
+
+### Item form
+![Item form](documents/python-validator/item-form.png)
+
+### Item modal
+![Item modal](documents/python-validator/item-model.png)
+
+### Item view
+![Item view](documents/python-validator/item-view.png)
+
+## Lighthouse 
+![Lighthouse](documents/lighthouse/1.png)
+![Lighthouse2](documents/lighthouse/2.png)
+
+## Entity realtionship diagram
+![ERD](documents/ERD.png)
 
 
 
