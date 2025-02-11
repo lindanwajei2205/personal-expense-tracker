@@ -19,8 +19,14 @@ With a simple, intuitive interface and graphical representation of your spending
 
 - [Features](#features)
   * [Logo and navbar](#logo-and-navbar)
+  * [Clear indication as to whether the user is logged in or out at all times](#clear-indication-as-to-whether-the-user-is-logged-in-or-out-at-all-times)
   * [Django alert messages](#django-alert-messages)
-  *
+  * [Call to action button](#call-to-action-button)
+  * [User dashboard](#user-dashboard)
+  * [Landing page](#landing-page)
+  * [Sign form](sign-form)
+
+ 
 
 
 
@@ -103,6 +109,16 @@ The navigation bar and logo are positioned at the top of the page, offering a re
 
 ![Large-signin](documents/large-signin.png)
 
+### Clear indication as to whether the user is logged in or out at all times
+The base HTML checks whether the user is logged in and displays either "You are logged in as [username]" or "You are not logged in," based on the authentication state.
+
+#### The image below indicates when a user is signed in
+
+![User Signedin](documents/user-signedin.png)
+
+#### The image below indicates when a user is signedout
+![User Signedout](documents/user-signedout.png)
+
 
 
 ### Django alert messages
@@ -125,10 +141,79 @@ The third example is an alert that shows 'Comment added successfully.' This pops
 
 ![Comment Alert Message](documents/alerts/django-alert3.png)
 
-### A constant display of the user's login status, showing whether they are logged in or out.
-The base HTML checks whether the user is logged in and displays either "You are logged in as [username]" or "You are not logged in," based on the authentication state.
+### Landing page
+This is where users or site visitors are directed when they click the URL/link to the site. It contains a header with the title 'Personal Expense Tracker' and an icon, a sign-in and sign-out navbar, a hero container with the text: 'Ready to track and take full control of your spending? Sign up now and take the first step towards financial management and freedom!' along with a call-to-action button beneath. It also includes brief but detailed information on why to choose our tracker. Additionally, there is a footer containing brief details about the web app, its features, social media icons, and a support email.
 
-####
+![Landing page](documents/Landing-page.png)
+
+
+
+
+### Call to action button
+When a visitor accesses the site, a call-to-action button is visible on the landing page. One of the key project goals is to 'build a web app that encourages and directs users to explore the expense tracker.' The button displays the text 'Get Started,' and the user is directed to the sign-in or sign-up page, depending on whether they are an already registered user or a site visitor.
+
+![Call to action button](documents/call-to-action.png)
+
+### User dashboard
+Upon successful login, users are directed to the insights dashboard, where they can track and analyse their expenses in an interactive graph and table, view previous comments on their expenses, add comments, and create, read, update/edit, and delete expense items. Users can also view their profile.
+
+#### Insight databoard
+This board contains different expense categories, a graphical representation of users' expenses, and a comment box where users can share their thoughts or suggest improvements regarding their spending. see images below:
+
+![Insight databoard](documents/user-dashboard/insight-databoard.png)
+![Insight databoard 2](documents/user-dashboard/insight-databoard2.png)
+
+#### Expense items
+Here, users can view their already listed expenses with images, they can choose to edit or delete their expenses aswell.
+![Expense items](documents/user-dashboard/expense-itemlist.png)
+
+#### Add item
+Users can add items, choose the category of the item, add a description, purchase-date, price, quantity and choose to upload image. see below:
+
+![Add item](documents/user-dashboard/add-expenses.png)
+
+#### Comments on expenses
+Users can view their previous comments along with the date and time they were created. They can add more comments and select an expense category as well. Once they click 'Save,' the comments are added immediately.
+
+![Comment on expenses](documents/user-dashboard/comments.png)
+
+#### Profile
+Users can view their profile. The profile page contains the username, email, and the date they registered.
+
+![Profile](documents/user-dashboard/profile.png)
+
+### Footer
+This include a little 'about us' information, features, social media icons and an email for support.
+
+![Footer](documents/user-dashboard/footer.png)
+
+### Sign form
+
+#### Sign in form
+This is a straightforward form that prompts for a username and password.
+![Signin form](documents/user-dashboard/signin-form.png)
+
+#### Sign up form
+This is a simple form to register a new user. It includes fields for the username, email, and password. The password must be entered twice for confirmation, and the form also specifies the requirements for an acceptable password.
+
+![Signup form](documents/user-dashboard/signup-form.png)
+
+#### Sign out 
+This page asks users if they are sure they want to sign out. It includes a red logout button underneath, and a button that takes the user back to the insights dashboard if they choose to remain logged in.
+
+![Sign out](documents/user-dashboard/signout-form.png)
+
+### Form with CRUD functionality when logged in
+
+
+
+
+
+
+
+
+
+
 
 
 
