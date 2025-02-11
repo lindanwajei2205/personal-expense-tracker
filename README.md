@@ -34,6 +34,7 @@ With a simple, intuitive interface and graphical representation of your spending
   * [Sign form](sign-form)
 - [Wireframe](#wireframe)
 - [Manual testing](#manual-testing)
+- [Future features](#future-features)
 
 - [Html and Css Validations](#html-and-css-validations)
 - [Python Validations](#python-validations)
@@ -242,6 +243,14 @@ This page asks users if they are sure they want to sign out. It includes a red l
 | profile | Yes | click | Users' profile which includes username, email and date registered | Pass | - |
 | change email| Yes | option to add/change email| 'part of future feature. | fail | - |
 | pie chart | Yes | Press delete button | correlates with the expense item added and updates automatically once new iten is added to a category | Pass |
+
+## Future features
+#### Email Verification
+Emails can be verified, and upon request, users can change or add their email address to their existing profile.
+
+#### Forget password link
+Users who cannot remember their login passwords can click the 'Forgot Password' link and receive an email to set a new password.
+
 
 ## Html and Css Validations
 Validations for HTML and CSS 
